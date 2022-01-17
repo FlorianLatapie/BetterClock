@@ -112,14 +112,14 @@ public class ClockController implements Initializable {
     }
 
     @FXML
-    private void borderpane_dragged(MouseEvent event) {
+    private void borderpaneDragged(MouseEvent event) {
         Stage stage = (Stage) borderPaneRoot.getScene().getWindow();
         stage.setY(event.getScreenY() - y);
         stage.setX(event.getScreenX() - x);
     }
 
     @FXML
-    private void borderpane_pressed(MouseEvent event) {
+    private void borderpanePressed(MouseEvent event) {
         x = event.getSceneX();
         y = event.getSceneY();
     }

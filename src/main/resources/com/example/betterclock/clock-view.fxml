@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPaneRoot" minHeight="220.0" minWidth="250.0" onMouseDragged="#borderpane_dragged" onMousePressed="#borderpane_pressed" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.betterclock.ClockController">
+<BorderPane fx:id="borderPaneRoot" minHeight="220.0" minWidth="250.0" onMouseDragged="#borderpaneDragged" onMousePressed="#borderpanePressed" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.betterclock.ClockController">
     <center>
         <VBox alignment="CENTER" spacing="5.0">
             <ProgressBar fx:id="hourProgressBar" maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="1.0" />
@@ -33,6 +33,11 @@
                                 <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
                             </accelerator>
                         </MenuItem>
+                  <MenuItem fx:id="switchSeconds" mnemonicParsing="false" onAction="#toggleSeconds" text="Toggle seconds">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
                         <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#onCloseMenuItemAction" text="Close">
                             <accelerator>
                                 <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
