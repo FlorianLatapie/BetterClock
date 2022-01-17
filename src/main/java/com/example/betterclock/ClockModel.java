@@ -1,26 +1,24 @@
 package com.example.betterclock;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * @author Florian Latapie
  */
 public class ClockModel {
     private LocalTime currentTime;
+    private static final DateTimeFormatter noSec = DateTimeFormatter.ofPattern("HH:mm");
+    private static final DateTimeFormatter yesSec = DateTimeFormatter.ofPattern("HH:mm:ss");
 
     public String getFormattedTime() {
         currentTime = LocalTime.now();
-        String hour = currentTime.getHour() >= 10 ? currentTime.getHour() + "" : "0" + currentTime.getHour();
-        String minute = currentTime.getMinute() >= 10 ? currentTime.getMinute() + "" : "0" + currentTime.getMinute();
-        return hour + ":" + minute;
+        return noSec.format(currentTime);
     }
 
     public String getFormattedTimeWithSeconds() {
         currentTime = LocalTime.now();
-        String hour = currentTime.getHour() >= 10 ? currentTime.getHour() + "" : "0" + currentTime.getHour();
-        String minute = currentTime.getMinute() >= 10 ? currentTime.getMinute() + "" : "0" + currentTime.getMinute();
-        String second = currentTime.getSecond() >= 10 ? currentTime.getSecond() + "" : "0" + currentTime.getSecond();
-        return hour + ":" + minute + ":" + second;
+        return yesSec.format(currentTime);
     }
 
     public Double getHourProgress() {
