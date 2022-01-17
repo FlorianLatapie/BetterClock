@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
-    -fx-fill: white;
     -fx-font-smoothing-type: gray;
     -fx-font-family: 'Roboto', sans-serif;
 }
@@ -10,14 +9,19 @@ BorderPane {
     -fx-background-color: black;
 }
 
-.progress-bar {
-    -fx-background-color:transparent;
+.progress-bar > .track {
+    -fx-text-box-border: white;
+    -fx-control-inner-background: white;
 }
-.progress-bar .track {
-    -fx-background-color: grey;
-    -fx-background-radius: 0;
-}
+
 .progress-bar .bar {
-    -fx-background-color: white;
-    -fx-background-radius: 0;
+    -fx-accent: black;
+}
+
+.progress-indicator .percentage {
+    -fx-fill: null;
+}
+
+.progress-indicator {
+    -fx-padding: 0 0 -16 0;
 }
