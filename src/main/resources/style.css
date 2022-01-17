@@ -4,9 +4,6 @@
     -fx-fill: white;
     -fx-font-smoothing-type: gray;
     -fx-font-family: 'Roboto', sans-serif;
-}
-
-BorderPane {
     -fx-background-color: black;
 }
 
