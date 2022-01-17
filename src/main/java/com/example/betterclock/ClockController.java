@@ -10,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -17,6 +19,7 @@ import java.time.LocalTime;
 import java.util.ResourceBundle;
 
 public class ClockController implements Initializable {
+    // FXML attributes
     @FXML
     private Label welcomeText;
     @FXML
@@ -26,25 +29,29 @@ public class ClockController implements Initializable {
 
     @FXML
     private MenuBar menuBar;
-    @FXML
-    private MenuItem closeMenuItem;
 
+    // Java attributes
+    private ClockModel clockModel;
+
+    // Creation and Initialisation
+    public ClockController(){
+        clockModel = new ClockModel();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e -> {
-            LocalTime currentTime = LocalTime.now();
-            hourProgressBar.setProgress(currentTime.getHour()/24.0);
-            minuteProgressBar.setProgress(currentTime.getMinute()/60.0);
-            String hour = currentTime.getHour() >= 10 ? currentTime.getHour() + "" : "0" + currentTime.getHour();
-            String minute = currentTime.getMinute() >= 10 ? currentTime.getMinute() + "" : "0" + currentTime.getMinute();
-            welcomeText.setText(hour + ":" + minute);
+            hourProgressBar.setProgress(clockModel.getHourProgress());
+            minuteProgressBar.setProgress(clockModel.getMinuteProgress());
+            welcomeText.setText(clockModel.getFormattedTime());
         }),
                 new KeyFrame(Duration.millis(500))
         );
         clock.setCycleCount(Animation.INDEFINITE);
         clock.play();
     }
+
+    // FXML methods
 
     @FXML
     protected void onCloseMenuItemAction() {

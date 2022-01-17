@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.betterclock.ClockController">
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.betterclock.ClockController">
     <center>
         <VBox alignment="CENTER" BorderPane.alignment="CENTER_RIGHT">
             <ProgressBar fx:id="hourProgressBar" prefWidth="200.0" progress="0.0" />
