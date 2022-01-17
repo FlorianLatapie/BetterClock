@@ -1,27 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
+    -fx-fill: black;
     -fx-font-smoothing-type: gray;
     -fx-font-family: 'Roboto', sans-serif;
+    -fx-background-color: white;
 }
 
-BorderPane {
-    -fx-background-color: black;
+/*https://github.com/tianyow/javafx-skins/blob/master/src/MistSilver/MistSilverSkin.css*/
+.progress-bar {
+    -fx-background-color:transparent;
 }
-
-.progress-bar > .track {
-    -fx-text-box-border: white;
-    -fx-control-inner-background: white;
+.progress-bar .track {
+    -fx-background-color: LightGray;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
 }
-
 .progress-bar .bar {
-    -fx-accent: black;
+    -fx-background-color: black;
+    -fx-background-radius: 100;
 }
 
-.progress-indicator .percentage {
-    -fx-fill: null;
-}
-
-.progress-indicator {
-    -fx-padding: 0 0 -16 0;
-}
+/*https://stackoverflow.com/questions/42714744/javafx-remove-percentage-from-progressindicator*/

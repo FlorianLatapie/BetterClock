@@ -8,20 +8,28 @@ import java.time.LocalTime;
 public class ClockModel {
     private LocalTime currentTime;
 
-    public String getFormattedTime(){
+    public String getFormattedTime() {
         currentTime = LocalTime.now();
         String hour = currentTime.getHour() >= 10 ? currentTime.getHour() + "" : "0" + currentTime.getHour();
         String minute = currentTime.getMinute() >= 10 ? currentTime.getMinute() + "" : "0" + currentTime.getMinute();
         return hour + ":" + minute;
     }
 
-    public Double getHourProgress(){
+    public Double getHourProgress() {
+        Double unit = 24.0;
         currentTime = LocalTime.now();
-        return currentTime.getHour()/24.0;
+        return getMinuteProgress() / unit + currentTime.getHour() / unit;
     }
 
-    public Double getMinuteProgress(){
+    public Double getMinuteProgress() {
+        Double unit = 60.0;
         currentTime = LocalTime.now();
-        return currentTime.getMinute()/60.0;
+        return getSecondProgress() / unit + currentTime.getMinute() / unit;
+    }
+
+    public Double getSecondProgress() {
+        Double unit = 60.0;
+        currentTime = LocalTime.now();
+        return currentTime.getSecond() / unit;
     }
 }

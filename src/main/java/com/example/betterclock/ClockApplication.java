@@ -2,20 +2,35 @@ package com.example.betterclock;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class ClockApplication extends Application {
+    private int height = 240;
+    private int width = 275;
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ClockApplication.class.getResource("clock-view.fxml"));
 
-        Scene scene = new Scene(fxmlLoader.load());
+        Parent root = fxmlLoader.load();
+        ClockController myController = fxmlLoader.getController();
+
+        Scene scene = new Scene(root);
+
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
-        stage.setTitle("BetterClock");
+        myController.setScene(scene);
+        myController.setStage(stage);
+
         stage.setScene(scene);
+        stage.setTitle("Better Clock");
+        /*stage.setMaxHeight(height);
+        stage.setMinHeight(height);
+        stage.setMinWidth(width);
+        stage.setMaxWidth(width*5);*/
         stage.show();
     }
 
