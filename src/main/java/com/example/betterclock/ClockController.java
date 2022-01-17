@@ -5,25 +5,26 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
-import java.time.LocalTime;
 import java.util.ResourceBundle;
 
 public class ClockController implements Initializable {
     // FXML attributes
     @FXML
-    private Label welcomeText;
+    private BorderPane borderPaneRoot;
+
+    @FXML
+    private Label time;
     @FXML
     private ProgressBar hourProgressBar;
     @FXML
@@ -35,12 +36,16 @@ public class ClockController implements Initializable {
     private MenuBar menuBar;
 
     // Java attributes
-    boolean isBlackTheme = true;
+    private boolean isBlackTheme = true;
+    private boolean areSecondsDisplayed = false;
 
     private ClockModel clockModel;
 
     private Scene scene;
     private Stage stage;
+
+    private double x = 0;
+    private double y = 0;
 
     // Creation and Initialisation
     public ClockController() {
@@ -53,10 +58,12 @@ public class ClockController implements Initializable {
             hourProgressBar.setProgress(clockModel.getHourProgress());
             minuteProgressBar.setProgress(clockModel.getMinuteProgress());
             secondProgressBar.setProgress(clockModel.getSecondProgress());
-            welcomeText.setText(clockModel.getFormattedTime());
-            stage.setTitle(clockModel.getFormattedTime() + " - Better Clock");
+
+            String timeText = areSecondsDisplayed ? clockModel.getFormattedTimeWithSeconds() : clockModel.getFormattedTime();
+            time.setText(timeText);
+            stage.setTitle(timeText + " - Better Clock");
         }),
-                new KeyFrame(Duration.millis(500))
+                new KeyFrame(Duration.millis(10))
         );
         clock.setCycleCount(Animation.INDEFINITE);
         clock.play();
@@ -89,6 +96,32 @@ public class ClockController implements Initializable {
     @FXML
     protected void onMenuExited() {
         menuBar.setOpacity(0);
+    }
+
+    @FXML
+    protected void toggleSeconds() {
+        if (areSecondsDisplayed) {
+            secondProgressBar.setMaxSize(0, 0);
+            secondProgressBar.setVisible(false);
+            areSecondsDisplayed = false;
+        } else {
+            secondProgressBar.setMaxSize(Integer.MAX_VALUE, Integer.MAX_VALUE);
+            secondProgressBar.setVisible(true);
+            areSecondsDisplayed = true;
+        }
+    }
+
+    @FXML
+    private void borderpane_dragged(MouseEvent event) {
+        Stage stage = (Stage) borderPaneRoot.getScene().getWindow();
+        stage.setY(event.getScreenY() - y);
+        stage.setX(event.getScreenX() - x);
+    }
+
+    @FXML
+    private void borderpane_pressed(MouseEvent event) {
+        x = event.getSceneX();
+        y = event.getSceneY();
     }
 
     // Java methods

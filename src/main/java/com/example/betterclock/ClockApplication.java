@@ -4,7 +4,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -27,10 +29,10 @@ public class ClockApplication extends Application {
 
         stage.setScene(scene);
         stage.setTitle("Better Clock");
-        /*stage.setMaxHeight(height);
-        stage.setMinHeight(height);
-        stage.setMinWidth(width);
-        stage.setMaxWidth(width*5);*/
+        stage.initStyle(StageStyle.UNDECORATED);
+
+        stage.getIcons().add(new Image(getClass().getResource("/images/clock_icon.png").toExternalForm()));
+
         stage.show();
     }
 

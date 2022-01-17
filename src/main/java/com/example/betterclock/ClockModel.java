@@ -15,6 +15,14 @@ public class ClockModel {
         return hour + ":" + minute;
     }
 
+    public String getFormattedTimeWithSeconds() {
+        currentTime = LocalTime.now();
+        String hour = currentTime.getHour() >= 10 ? currentTime.getHour() + "" : "0" + currentTime.getHour();
+        String minute = currentTime.getMinute() >= 10 ? currentTime.getMinute() + "" : "0" + currentTime.getMinute();
+        String second = currentTime.getSecond() >= 10 ? currentTime.getSecond() + "" : "0" + currentTime.getSecond();
+        return hour + ":" + minute + ":" + second;
+    }
+
     public Double getHourProgress() {
         Double unit = 24.0;
         currentTime = LocalTime.now();
