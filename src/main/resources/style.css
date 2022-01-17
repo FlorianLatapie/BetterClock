@@ -10,6 +10,7 @@ BorderPane {
     -fx-background-color: black;
 }
 
+/*https://github.com/tianyow/javafx-skins/blob/master/src/MistSilver/MistSilverSkin.css*/
 .progress-bar {
     -fx-background-color:transparent;
 }
@@ -21,3 +22,5 @@ BorderPane {
     -fx-background-color: white;
     -fx-background-radius: 0;
 }
+
+/*https://stackoverflow.com/questions/42714744/javafx-remove-percentage-from-progressindicator*/
