@@ -9,13 +9,15 @@
 
 /*https://github.com/tianyow/javafx-skins/blob/master/src/MistSilver/MistSilverSkin.css*/
 .progress-bar {
-    -fx-background-color:transparent;
+    -fx-background-color: transparent;
 }
+
 .progress-bar .track {
     -fx-background-color: LightGray;
     -fx-border-radius: 100;
     -fx-background-radius: 100;
 }
+
 .progress-bar .bar {
     -fx-background-color: black;
     -fx-background-radius: 100;

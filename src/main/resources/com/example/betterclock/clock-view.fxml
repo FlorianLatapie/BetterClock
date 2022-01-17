@@ -6,41 +6,53 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="borderPaneRoot" minHeight="220.0" minWidth="250.0" onMouseDragged="#borderpaneDragged" onMousePressed="#borderpanePressed" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.betterclock.ClockController">
+<BorderPane fx:id="borderPaneRoot" minHeight="220.0" minWidth="250.0" onMouseDragged="#borderpaneDragged"
+            onMousePressed="#borderpanePressed" style="-fx-border-radius: 10;" xmlns="http://javafx.com/javafx/16"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.betterclock.ClockController">
     <center>
-        <VBox alignment="CENTER" spacing="5.0">
-            <ProgressBar fx:id="hourProgressBar" maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="1.0" />
+        <VBox alignment="CENTER" spacing="5.0" style="-fx-border-radius: 10;">
+            <ProgressBar fx:id="hourProgressBar" maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="1.0"/>
 
             <Label fx:id="time" text="XX:XX:XX">
                 <font>
-                    <Font size="75.0" />
+                    <Font size="75.0"/>
                 </font>
             </Label>
-            <ProgressBar fx:id="minuteProgressBar" layoutX="30.0" layoutY="30.0" maxWidth="1.7976931348623157E308" onMouseClicked="#toggleSeconds" prefWidth="200.0" progress="1.0" />
-            <ProgressBar fx:id="secondProgressBar" layoutX="35.0" layoutY="137.0" maxHeight="0" maxWidth="1.7976931348623157E308" onMouseClicked="#toggleSeconds" prefWidth="200.0" progress="1.0" visible="false" />
+            <ProgressBar fx:id="minuteProgressBar" layoutX="30.0" layoutY="30.0" maxWidth="1.7976931348623157E308"
+                         onMouseClicked="#toggleSeconds" prefWidth="200.0" progress="1.0"/>
+            <ProgressBar fx:id="secondProgressBar" layoutX="35.0" layoutY="137.0" maxHeight="0"
+                         maxWidth="1.7976931348623157E308" onMouseClicked="#toggleSeconds" prefWidth="200.0"
+                         progress="1.0" visible="false"/>
             <padding>
-                <Insets bottom="25.0" left="25.0" right="25.0" />
+                <Insets bottom="25.0" left="25.0" right="25.0"/>
             </padding>
         </VBox>
     </center>
     <top>
-        <MenuBar fx:id="menuBar" onMouseEntered="#onMenuEntered" onMouseExited="#onMenuExited" opacity="0.0" BorderPane.alignment="CENTER">
+        <MenuBar fx:id="menuBar" onMouseEntered="#onMenuEntered" onMouseExited="#onMenuExited" opacity="0.0"
+                 BorderPane.alignment="CENTER">
             <menus>
                 <Menu mnemonicParsing="false" text="Menu">
                     <items>
-                        <MenuItem fx:id="switchThemeMenuItem" mnemonicParsing="false" onAction="#changeTheme" text="Change theme">
+                        <MenuItem fx:id="switchThemeMenuItem" mnemonicParsing="false" onAction="#changeTheme"
+                                  text="Change theme">
                             <accelerator>
-                                <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
                             </accelerator>
                         </MenuItem>
-                  <MenuItem fx:id="switchSeconds" mnemonicParsing="false" onAction="#toggleSeconds" text="Toggle seconds">
-                     <accelerator>
-                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
-                     </accelerator>
-                  </MenuItem>
-                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#onCloseMenuItemAction" text="Close">
+                        <MenuItem fx:id="switchSeconds" mnemonicParsing="false" onAction="#toggleSeconds"
+                                  text="Toggle seconds">
                             <accelerator>
-                                <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#onCloseMenuItemAction"
+                                  text="Close">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
                             </accelerator>
                         </MenuItem>
                     </items>

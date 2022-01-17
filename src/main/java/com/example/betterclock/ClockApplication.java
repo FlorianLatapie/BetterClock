@@ -11,8 +11,6 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class ClockApplication extends Application {
-    private int height = 240;
-    private int width = 275;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -24,6 +22,7 @@ public class ClockApplication extends Application {
         Scene scene = new Scene(root);
 
         scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+
         myController.setScene(scene);
         myController.setStage(stage);
 

@@ -7,20 +7,17 @@
     -fx-background-color: black;
 }
 
-.border-pane {
-    -fx-background-color: red;
-    -fx-border-radius: 10;
-}
-
 /*https://github.com/tianyow/javafx-skins/blob/master/src/MistSilver/MistSilverSkin.css*/
 .progress-bar {
-    -fx-background-color:transparent;
+    -fx-background-color: transparent;
 }
+
 .progress-bar .track {
     -fx-background-color: #181818;
     -fx-border-radius: 100;
     -fx-background-radius: 100;
 }
+
 .progress-bar .bar {
     -fx-background-color: white;
     -fx-background-radius: 100;
