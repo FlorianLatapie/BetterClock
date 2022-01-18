@@ -14,13 +14,13 @@
 
 .progress-bar .track {
     -fx-background-color: LightGray;
-    -fx-border-radius: 100;
-    -fx-background-radius: 100;
+    -fx-border-radius: 2;
+    -fx-background-radius: 2;
 }
 
 .progress-bar .bar {
     -fx-background-color: black;
-    -fx-background-radius: 100;
+    -fx-background-radius: 2;
 }
 
 /*https://stackoverflow.com/questions/42714744/javafx-remove-percentage-from-progressindicator*/
