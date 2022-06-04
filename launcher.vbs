@@ -1,1 +1,1 @@
-CreateObject("Wscript.Shell").Run "launcher.bat", 0, True
+CreateObject("Wscript.Shell").Run "target\betterclock\bin\launcher.bat", 0, True

@@ -11,15 +11,28 @@ I wanted to create a clock that combines the advantage of an analog clock: progr
 ## Screenshots 
 
 ### App
-| Theme   | Default                 | With seconds            | Top left menu        |
-| ------- | ----------------------- | ----------------------- | -------------------- |
-| Black   | ![image][default_black] | ![image][seconds_black] | ![image][menu_black] |
-| White   | ![image][default_white] | ![image][seconds_white] | ![image][menu_white] |
+| Theme | Default                 | With seconds            | Top left menu        |
+|-------|-------------------------|-------------------------|----------------------|
+| Black | ![image][default_black] | ![image][seconds_black] | ![image][menu_black] |
+| White | ![image][default_white] | ![image][seconds_white] | ![image][menu_white] |
 
 ### Taskbar
 | Default                    | With seconds               |
-| -------------------------- | -------------------------- |
+|----------------------------|----------------------------|
 | ![image][default_taskbark] | ![image][seconds_taskbark] |
+
+## How to compile and run ?
+
+### From IntelliJ IDEA
+Just click on the "Run" button. 
+
+### From the compiled executable
+First use maven to compile the project.
+```sh
+mvn javafx:jlink
+```
+This command generates a `launcher.bat` file that can be used to run the application.
+You just have to run `launcher.vbs` at the root of the project to run it. Feel free to create a shortcut to the vbs script.
 
 
 <!-- Sources -->
