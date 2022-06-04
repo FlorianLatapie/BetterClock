@@ -34,7 +34,7 @@ public class ClockModel {
     }
 
     public Double getSecondProgress() {
-        Double unit = 60.0;
+        double unit = 60.0;
         currentTime = LocalTime.now();
         return currentTime.getSecond() / unit;
     }

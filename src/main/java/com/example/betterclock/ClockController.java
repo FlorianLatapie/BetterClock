@@ -11,18 +11,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ClockController implements Initializable {
     // FXML attributes
-    @FXML
-    private BorderPane borderPaneRoot;
-
     @FXML
     private Label time;
     @FXML
@@ -39,7 +36,7 @@ public class ClockController implements Initializable {
     private boolean isBlackTheme = true;
     private boolean areSecondsDisplayed = false;
 
-    private ClockModel clockModel;
+    private final ClockModel clockModel;
 
     private Scene scene;
     private Stage stage;
@@ -80,10 +77,10 @@ public class ClockController implements Initializable {
     protected void changeTheme() {
         scene.getStylesheets().clear();
         if (isBlackTheme) {
-            scene.getStylesheets().add(getClass().getResource("/style-white.css").toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style-white.css")).toExternalForm());
             isBlackTheme = false;
         } else {
-            scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style.css")).toExternalForm());
             isBlackTheme = true;
         }
     }

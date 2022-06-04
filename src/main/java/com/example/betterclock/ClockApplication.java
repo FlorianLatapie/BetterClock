@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class ClockApplication extends Application {
-
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ClockApplication.class.getResource("clock-view.fxml"));
@@ -21,7 +21,7 @@ public class ClockApplication extends Application {
 
         Scene scene = new Scene(root);
 
-        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style.css")).toExternalForm());
 
         myController.setScene(scene);
         myController.setStage(stage);
@@ -30,7 +30,7 @@ public class ClockApplication extends Application {
         stage.setTitle("Better Clock");
         stage.initStyle(StageStyle.UNDECORATED);
 
-        stage.getIcons().add(new Image(getClass().getResource("/images/clock_icon.png").toExternalForm()));
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResource("/images/clock_icon.png")).toExternalForm()));
 
         stage.show();
     }
