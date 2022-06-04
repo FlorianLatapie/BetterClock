@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="ClockApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="com.example.betterclock.ClockApplication" />
+    <option name="MAIN_CLASS_NAME" value="github.florianlatapie.betterclock.ClockApplication" />
     <module name="BetterClock" />
     <extension name="coverage">
       <pattern>

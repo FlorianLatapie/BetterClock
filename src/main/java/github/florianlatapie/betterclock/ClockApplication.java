@@ -1,4 +1,4 @@
-package com.example.betterclock;
+package github.florianlatapie.betterclock;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

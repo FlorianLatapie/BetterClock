@@ -1,4 +1,4 @@
-package com.example.betterclock;
+package github.florianlatapie.betterclock;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;

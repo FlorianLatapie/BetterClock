@@ -58,7 +58,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.betterclock.ClockApplication</mainClass>
+                            <mainClass>github.florianlatapie.betterclock.ClockApplication</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
@@ -72,14 +72,14 @@
                 <configuration>
                     <jlinkImageName>betterclock</jlinkImageName>
                     <launcher>launcher</launcher>
-                    <mainClass>betterclock/com.example.betterclock.ClockApplication</mainClass>
+                    <mainClass>betterclock/github.florianlatapie.betterclock.ClockApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.betterclock/com.example.betterclock.ClockApplication</mainClass>
+                            <mainClass>com.example.betterclock/github.florianlatapie.betterclock.ClockApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>
