@@ -3,6 +3,6 @@ module com.example.betterclock {
     requires javafx.fxml;
 
 
-    opens github.florianlatapie.betterclock to javafx.fxml;
-    exports github.florianlatapie.betterclock;
+    opens fr.florianlatapie.betterclock to javafx.fxml;
+    exports fr.florianlatapie.betterclock;
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <BorderPane fx:id="borderPaneRoot" minHeight="220.0" minWidth="250.0" onMouseDragged="#borderpaneDragged"
             onMousePressed="#borderpanePressed" style="-fx-border-radius: 10;" xmlns="http://javafx.com/javafx/16"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="github.florianlatapie.betterclock.ClockController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.florianlatapie.betterclock.ClockController">
     <center>
         <VBox alignment="CENTER" spacing="5.0" style="-fx-border-radius: 10;">
             <ProgressBar fx:id="hourProgressBar" maxWidth="1.7976931348623157E308" prefWidth="200.0" progress="1.0"/>
@@ -31,33 +31,29 @@
     <top>
         <MenuBar fx:id="menuBar" onMouseEntered="#onMenuEntered" onMouseExited="#onMenuExited" opacity="0.0"
                  BorderPane.alignment="CENTER">
-            <menus>
-                <Menu mnemonicParsing="false" text="Menu">
-                    <items>
-                        <MenuItem fx:id="switchThemeMenuItem" mnemonicParsing="false" onAction="#changeTheme"
-                                  text="Change theme">
-                            <accelerator>
-                                <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP"
-                                                    shortcut="UP"/>
-                            </accelerator>
-                        </MenuItem>
-                        <MenuItem fx:id="switchSeconds" mnemonicParsing="false" onAction="#toggleSeconds"
-                                  text="Toggle seconds">
-                            <accelerator>
-                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
-                                                    shortcut="UP"/>
-                            </accelerator>
-                        </MenuItem>
-                        <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#onCloseMenuItemAction"
-                                  text="Close">
-                            <accelerator>
-                                <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP"
-                                                    shortcut="UP"/>
-                            </accelerator>
-                        </MenuItem>
-                    </items>
-                </Menu>
-            </menus>
+            <Menu mnemonicParsing="false" text="Menu">
+                <MenuItem fx:id="switchThemeMenuItem" mnemonicParsing="false" onAction="#changeTheme"
+                          text="Change theme">
+                    <accelerator>
+                        <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP"
+                                            shortcut="UP"/>
+                    </accelerator>
+                </MenuItem>
+                <MenuItem fx:id="switchSeconds" mnemonicParsing="false" onAction="#toggleSeconds"
+                          text="Toggle seconds">
+                    <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                            shortcut="UP"/>
+                    </accelerator>
+                </MenuItem>
+                <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#onCloseMenuItemAction"
+                          text="Close">
+                    <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP"
+                                            shortcut="UP"/>
+                    </accelerator>
+                </MenuItem>
+            </Menu>
         </MenuBar>
     </top>
 </BorderPane>

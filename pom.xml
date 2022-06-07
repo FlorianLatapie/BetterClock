@@ -11,19 +11,19 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.7.1</junit.version>
+        <junit.version>5.8.2</junit.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>17.0.0.1</version>
+            <version>18.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>17.0.0.1</version>
+            <version>18.0.1</version>
         </dependency>
 
         <dependency>
@@ -58,7 +58,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>github.florianlatapie.betterclock.ClockApplication</mainClass>
+                            <mainClass>fr.florianlatapie.betterclock.ClockApplication</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
                         </manifest>
@@ -72,14 +72,14 @@
                 <configuration>
                     <jlinkImageName>betterclock</jlinkImageName>
                     <launcher>launcher</launcher>
-                    <mainClass>betterclock/github.florianlatapie.betterclock.ClockApplication</mainClass>
+                    <mainClass>betterclock/fr.florianlatapie.betterclock.ClockApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.betterclock/github.florianlatapie.betterclock.ClockApplication</mainClass>
+                            <mainClass>com.example.betterclock/fr.florianlatapie.betterclock.ClockApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>

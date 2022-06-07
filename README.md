@@ -17,9 +17,9 @@ I wanted to create a clock that combines the advantage of an analog clock: progr
 | White | ![image][default_white] | ![image][seconds_white] | ![image][menu_white] |
 
 ### Taskbar
-| Default                    | With seconds               |
-|----------------------------|----------------------------|
-| ![image][default_taskbark] | ![image][seconds_taskbark] |
+| Default                   | With seconds              |
+|---------------------------|---------------------------|
+| ![image][default_taskbar] | ![image][seconds_taskbar] |
 
 ## How to compile and run ?
 
@@ -48,5 +48,5 @@ You just have to run `launcher.vbs` at the root of the project to run it. Feel f
 [seconds_white]:https://user-images.githubusercontent.com/70631622/169669999-9205dc49-a2f3-463a-ab31-9b6b8b30fdda.png
 [menu_white]:https://user-images.githubusercontent.com/70631622/169670005-0eb67d82-f86c-4fe7-9129-ef51c7c598be.png
 
-[default_taskbark]:https://user-images.githubusercontent.com/70631622/169670107-ec7641fb-32e5-4e4b-9863-2197157a180f.png
-[seconds_taskbark]:https://user-images.githubusercontent.com/70631622/169670109-c2901571-9c2b-4ada-9dd5-f7459502a889.png
+[default_taskbar]:https://user-images.githubusercontent.com/70631622/169670107-ec7641fb-32e5-4e4b-9863-2197157a180f.png
+[seconds_taskbar]:https://user-images.githubusercontent.com/70631622/169670109-c2901571-9c2b-4ada-9dd5-f7459502a889.png
