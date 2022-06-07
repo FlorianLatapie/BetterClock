@@ -1,4 +1,4 @@
-package github.florianlatapie.betterclock;
+package fr.florianlatapie.betterclock;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

@@ -1,8 +1,8 @@
-module com.example.betterclock {
+module fr.florianlatapie.betterclock {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens github.florianlatapie.betterclock to javafx.fxml;
-    exports github.florianlatapie.betterclock;
+    opens fr.florianlatapie.betterclock to javafx.fxml;
+    exports fr.florianlatapie.betterclock;
 }
