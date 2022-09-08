@@ -36,6 +36,12 @@ public class ClockModel {
     public Double getSecondProgress() {
         double unit = 60.0;
         currentTime = LocalTime.now();
-        return currentTime.getSecond() / unit;
+        return currentTime.getSecond() / unit + getNanoSecondProgress() / unit;
+    }
+
+    public Double getNanoSecondProgress() {
+        double unit = 1_000_000_000.0;
+        currentTime = LocalTime.now();
+        return currentTime.getNano() / unit;
     }
 }
