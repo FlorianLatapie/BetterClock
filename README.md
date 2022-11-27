@@ -1,5 +1,7 @@
 # ⏰ BetterClock ⏰
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/FlorianLatapie/BetterClock?branch=main)](https://bettercodehub.com/)
+
 ## Origin story 
 I just watched this video : 
 [So... the minute hand shows progression — apparently we think of time in wildly different ways][youtube_video] 
