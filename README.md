@@ -2,23 +2,25 @@
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/FlorianLatapie/BetterClock?branch=main)](https://bettercodehub.com/)
 
-## Origin story 
-I just watched this video : 
-[So... the minute hand shows progression — apparently we think of time in wildly different ways][youtube_video] 
+## Origin story
+
+I just watched this video :
+[So... the minute hand shows progression — apparently we think of time in wildly different ways][youtube_video]
 from the excellent channel [Technology Connextras][youtube_second_channel].
 
-I wanted to create a clock that combines the advantage of an analog clock: progress bar thanks to the hands and the advantage of a digital clock: precise and quick numbers to read. 
+I wanted to create a clock that combines the advantage of an analog clock: progress bar thanks to the hands and the advantage of a digital clock: precise and quick numbers to read.
 
-
-## Screenshots 
+## Screenshots
 
 ### App
+
 | Theme | Default                 | With seconds            | Top left menu        |
 |-------|-------------------------|-------------------------|----------------------|
 | Black | ![image][default_black] | ![image][seconds_black] | ![image][menu_black] |
 | White | ![image][default_white] | ![image][seconds_white] | ![image][menu_white] |
 
 ### Taskbar
+
 | Default                   | With seconds              |
 |---------------------------|---------------------------|
 | ![image][default_taskbar] | ![image][seconds_taskbar] |
@@ -26,21 +28,23 @@ I wanted to create a clock that combines the advantage of an analog clock: progr
 ## How to compile and run ?
 
 ### From IntelliJ IDEA
-Just click on the "Run" button. 
+
+Just click on the "Run" button.
 
 ### From the compiled executable
+
 First use maven to compile the project.
+
 ```sh
 mvn javafx:jlink
 ```
+
 This command generates a `launcher.bat` file that can be used to run the application.
 You just have to run `launcher.vbs` at the root of the project to run it. Feel free to create a shortcut to the vbs script.
-
 
 <!-- Sources -->
 [youtube_video]:https://youtu.be/NeopkvAP-ag
 [youtube_second_channel]:https://www.youtube.com/c/TechnologyConnections2
-[youtube_channel]:https://www.youtube.com/c/TechnologyConnections
 
 [default_black]: https://user-images.githubusercontent.com/70631622/169669787-4f5f1fe4-e05e-4a92-9165-aa7932a0962c.png
 [seconds_black]:https://user-images.githubusercontent.com/70631622/169669930-858d2abe-a630-41b3-aafb-d6fa38e127ab.png
