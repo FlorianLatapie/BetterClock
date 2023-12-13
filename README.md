@@ -1,7 +1,5 @@
 # ⏰ BetterClock ⏰
 
-[![BCH compliance](https://bettercodehub.com/edge/badge/FlorianLatapie/BetterClock?branch=main)](https://bettercodehub.com/)
-
 ## Origin story
 
 I just watched this video :
@@ -39,7 +37,7 @@ First use maven to compile the project.
 mvn javafx:jlink
 ```
 
-This command generates a `launcher.bat` file that can be used to run the application.
+This command generates `./target/betterclock/bin/launcher.bat` file that can be used to run the application.
 You just have to run `launcher.vbs` at the root of the project to run it. Feel free to create a shortcut to the vbs script.
 
 <!-- Sources -->
